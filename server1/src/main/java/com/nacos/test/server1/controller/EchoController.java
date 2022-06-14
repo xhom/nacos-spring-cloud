@@ -13,11 +13,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RefreshScope
 @RestController
 public class EchoController {
-    @Value("${hello:x}")
+    @Value("${hello}")
     private String hello;
 
-    @GetMapping("/echo/{string}")
-    public String echo(@PathVariable String string) {
-        return "Hello Nacos Discovery：" + string+ ", hello="+hello;
+    @GetMapping("/echo/{param}")
+    public String echo(@PathVariable String param) {
+        return "Hello Nacos：" + param + ", hello="+hello;
     }
 }

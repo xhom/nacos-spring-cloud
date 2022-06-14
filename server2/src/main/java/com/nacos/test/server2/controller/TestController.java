@@ -21,6 +21,7 @@ public class TestController {
 
     @GetMapping("/echo/{str}")
     public String echo(@PathVariable String str) {
-        return restTemplate.getForObject("http://nacos-server1/echo/" + str, String.class);
+        String response = restTemplate.getForObject("http://nacos-server1/echo/" + str, String.class);
+        return "server2: " + response ;
     }
 }
