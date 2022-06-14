@@ -9,16 +9,13 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>server2</artifactId>
     <name>server2</name>
-
+    <artifactId>server2</artifactId>
 
     <dependencies>
-
     </dependencies>
 
     <build>
-
     </build>
 
 </project>
