@@ -15,8 +15,8 @@ spring:
           predicates:
             - Path: /s1/**
         - id: server2
-            uri: lb://nacos-server2
-            predicates:
-              - Path: /s2/**
+          uri: lb://nacos-server2
+          predicates:
+            - Path: /s2/**
 
 
