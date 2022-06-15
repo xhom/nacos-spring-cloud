@@ -13,10 +13,15 @@ spring:
         - id: server1
           uri: lb://nacos-server1
           predicates:
-            - Path: /s1/**
+            - Path=/s1/**
+          filters:
+            - StripPrefix=1
         - id: server2
           uri: lb://nacos-server2
           predicates:
-            - Path: /s2/**
+            - Path=/s2/**
+          filters:
+            - StripPrefix=1  # 去除 /s2
+            - PrefixPath=/ns2 # 添加前缀：/ns2
 
 
