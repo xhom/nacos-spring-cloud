@@ -23,5 +23,7 @@ spring:
           filters:
             - StripPrefix=1  # 去除 /s2
             - PrefixPath=/ns2 # 添加前缀：/ns2
-
+auth:
+  login-path: /login
+  token-name: Access-Token
 
